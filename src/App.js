@@ -1,35 +1,20 @@
-import React from 'react';
-import './style.css';
-
-import Logo from './components/Logo';
-import WordBox from './components/WordBox';
-import SearchButton from './components/SearchButton';
-import LuckyButton from './components/LuckyButton';
-import LanguageNote from './components/LanguageNote';
+import React, {useState} from "react";
+import "./style.css";
 
 export default function App() {
-  return (
-    <div style={{ marginTop: '30px' }}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Logo />
+    let [bio, setBio] = useState('')
+    return (
+      <div>
+
+        <textArea value={bio} onChange={(e)=>{setBio(e.target.value)}}>
+        </textArea><br/>
+
+        <button onClick={ ()=>{
+               let newBio= bio
+               setBio(newBio.toUpperCase())}}>Submit</button>
+
+        <p>{bio}</p>
+        
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <WordBox />
-      </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '5px',
-          marginTop: '5px',
-        }}
-      >
-        <SearchButton />
-        <LuckyButton />
-      </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <LanguageNote />
-      </div>
-    </div>
-  );
+    )
 }
