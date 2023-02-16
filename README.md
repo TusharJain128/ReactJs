@@ -1,5 +1,5 @@
 # ReactJs
 
-## Assignment-2 
+## Assignment-4 
 
-Create a page with a textarea, where a user writes their introduction/bio in mixed case. There will be a button on click of which the bio will change to upper case and show on a paragraph element below the textarea.
+You will build a simple React App which increments/decrements count on-screen when buttons are clicked using React State.
