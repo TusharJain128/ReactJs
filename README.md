@@ -1,5 +1,4 @@
 # ReactJs
 
-## Assignment-4 
 
-You will build a simple React App which increments/decrements count on-screen when buttons are clicked using React State.
+Create a counter which increases by 1 each second.
